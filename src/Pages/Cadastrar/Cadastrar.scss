@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 2500px){
+
+    
+    #Header_Cadastrar{
+        max-width: 90%;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        margin:auto;
+        .div_header_cadastrar{
+            width: 100%;
+            text-align: center;
+            #img_header_cadastrar{
+                width: 200px;
+            }
+            #div_link_header_cadastrar{
+                margin-top: 90px;
+            }
+            #link_header_cadastrar{
+                text-decoration: none;
+                color: var(--redColor);
+                font-size: 2rem;
+                font-weight: bold;
+                border: 2px solid var(--redColor);
+                padding: 5px 15px;
+                border-radius: 10px 0px ;
+            }
+            #link_header_cadastrar:hover{
+                color: white;
+                background-color: var(--redColor);
+            }
+        }
+    }
+
+    #div_body_cadastrar{
+        max-width: 70%;
+        margin: auto;
+        text-align: center;
+        background-color: var(--color2);
+        border: 1px solid var(--redColor);
+        border-radius: 6px;
+        #form_body_cadastrar{
+            max-width: 100%;
+            margin: auto;
+            border-radius: 6px;
+            
+            #form_filha_cadastrar{
+                display: flex;
+                p{
+                    height: 40px;
+                    margin-top: 20px;
+                }
+                #label_body_cadastrar{
+                    width: 80%;
+                    text-align: right;
+                    font-size: 2rem;
+                    color: black;
+                }
+                #input_body_cadastrar{
+                    width: 100%;
+                    text-align: left;
+                    input{
+                        width: 50%;
+                        height: 40px;
+                        font-size: 2rem;
+                        border: 1px solid var(--redColor);
+                        color: var(--redColor);
+                        margin-left: 10px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            #button_form_cadastrar{
+                margin: 50px 0px 50px 0px; 
+                font-size: 2rem;
+                background-color: white;
+                color: var(--redColor);
+                padding: 10px 15px;
+                border-radius: 10px 0px;
+                border: 2px solid var(--redColor);
+            }
+            #button_form_cadastrar:hover{
+                background-color: var(--redColor);
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

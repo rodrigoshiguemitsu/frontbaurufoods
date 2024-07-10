@@ -1,0 +1,166 @@
+@charset 'UTF-8';
+
+@media screen and (max-width:2000px){
+    #pagamento_principal{
+        #div_header_pagamento{
+            display: flex;
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+            height: 80px;
+            #div_img_header_pagamento{
+                img{
+                    width: 200px;
+                }
+            }
+            #div_link_header_pagamento{
+                width: 100%;
+                
+                #link_pagamento_header{
+                    float: right;
+                    margin-top: 90px;
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    color: var(--redColor);
+                    font-weight: bold;
+                }
+                #link_pagamento_header:hover{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        #titulo_pagamento{
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--redColor);
+        }
+        #form_pagamento_principal{
+            max-width: 2000px;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            #div_produtos_form_pagamento{
+                
+                #descricao_pagamento{
+                    display: flex;
+                    padding: 30px;
+                    margin-top: 10px;
+                    border: 1px solid green;
+                    border-radius: 10px 0px;
+                    #nome_preco_pagamento{
+                        width: 30%;
+                    }
+                    #div_img_pagamento{
+                        max-width: 30%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                #div_total_pagar{
+                    height: 100px;
+                    p{
+                        margin-top:10px;
+                        float: center;
+                        color: green;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        border: 2px solid green;
+                        padding: 15px;
+                        border-radius: 10px 0px;
+                    }
+                }
+            }
+        }
+        #div_dados_pagamento{
+            display: flex;
+            text-align: center;
+            #info_pagamentos{
+                max-width: 50%;
+                h2{
+                text-align: center;
+                }
+                p{
+                    text-align: justify;
+                }
+            }
+            #button_pagamento{
+                margin-top: 30px;
+                width: 50%;
+                text-align: center;
+                button{
+                    border: 2px solid green;
+                    padding: 15px;
+                    border-radius: 20px;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: green;
+                    background-color: rgba(0, 0, 0, 0.153);
+                }
+                button:hover{
+                    cursor: pointer;
+                    background-color: green;
+                    color: white;
+                    border: 2px solid greenyellow;
+                }
+            }
+        }
+    }
+    #modal_pagamentoFinalizado{
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+        border: 2px solid green;
+        #div_titulo{
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            h1{
+                color: green;
+
+            }
+        }
+        #div_link{
+            text-align: center;
+            #tit_link{
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: green;
+                margin-bottom: 10px;
+            }
+            a{
+                font-size: 0.8rem;
+            }
+            p{
+                width: 70%;
+                margin: auto;
+                margin-top: 40px;
+                text-align: justify;
+                font-weight: bold;
+            }
+        }
+        #div_liberar_pedido{
+            text-align: center;
+            margin-top: 40px;
+            button{
+                padding: 15px;
+                font-weight: bold;
+                font-size: 2rem;
+                color: green;
+                border: 2px solid green;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.153);
+            }
+            button:hover{
+                cursor: pointer;
+                background-color: green;
+                color: white;
+                border: 2px solid greenyellow;
+            }
+        }
+    }
+}

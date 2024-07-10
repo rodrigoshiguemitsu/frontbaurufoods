@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 2000px){
+    #div_corpo_pricipal{
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+
+    #div_body_principal{
+        max-width: 1000px;
+        margin: auto;
+        
+        hr{
+            margin-top: 10px;
+            border: 2px solid var(--redColor);
+        }
+        #listaProdutos_body{
+            max-width: 1000px;
+            width: 100%;
+            margin: auto;
+        }
+            #aga1_promocoes{
+                margin: 30px;
+                font-size: 3rem;
+                color: var(--redColor);
+            }
+            #div_produtos_principal{    
+            width: 98%;
+            margin: auto;
+            display: flex;
+            border: 2px solid var(--redColor);
+            border-radius: 6px;
+            margin: 10px 5px 5px 10px;
+            height: 300px;
+            #div1_produtos_conteudo{
+                text-align: center;
+                width: 30%;
+                height: 300px;
+                background-color: rgba(255, 0, 0, 0.172);
+                img{
+                    width: 100px;
+                }
+            }
+        #div2_produtos_conteudo{
+            width: 300px;
+            height: 300px;
+            img{
+                width: 100%;
+                height: 295px;
+            }
+        }
+        #div3_produtos_conteudo{
+            width: 40%;
+            text-align: center;
+            h1{
+                margin: 20px;
+            }
+            p{
+                margin: 10px;
+            }
+            #button_detalhes{
+                margin-top: 10px;
+                button{
+                    border:2px solid black;
+                    background-color: var(--redColor);
+                    color: white;
+                    font-weight: bold;
+                    padding: 10px;
+                    border-radius: 10px ;
+                }
+                button:hover{
+                    cursor: pointer;
+                    color: white;
+                    border: 2px solid var(--redColor);
+                    font-size: 1.1rem;
+                }
+            }
+            #button_add_carrinho{
+                margin-top: 15px;
+                button{
+                    background-color: var(--redColor);
+                    color: white;
+                    font-weight: bold;
+                    border:2px solid black;
+                    padding: 10px;
+                    border-radius: 10px;
+                    #icon_sacola{
+                        font-size: 1rem;
+                        margin-left: 5px;
+                    }
+                }
+                button:hover{
+                    cursor: pointer;
+                    border: 2px solid var(--redColor);
+                    color: white;
+                    font-size: 1.1rem;
+                }
+                
+            }
+            
+        
+        }
+        
+    }
+}
+#div_modal_principal{
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+   
+    img{
+        width: 100%;
+    }
+    #div_detalhes{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        
+        #div1_detalhes{
+            max-width: 100%;
+            width: 100%;
+            h2{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1.3rem;
+                margin-top: 8px;
+            }
+        }
+        #div2_detalhes{
+            max-width: 100%;
+            width: 100%;
+            p{
+                font-size: 1.3rem;
+                margin-top: 8px;
+            }
+            #preco_concorrencia{
+                color: var(--redColor);
+                font-size: 1.1rem;
+                margin-top: 8px;
+            }
+            #preco_bauru_foods{
+                border: 2px solid var(--redColor);
+                border-radius: 10px 0px;
+                padding: 8px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--redColor);
+            }
+        }
+    }
+}
+#div_button_modal{
+    
+    color: var(--redColor);
+    font-size: 1.5rem;
+    position: fixed;
+    right: 90px;
+}
+#div_button_modal:hover{
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: black;
+    
+}
+    }
+}
+
+
