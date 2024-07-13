@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+
+@media screen and (max-width: 2000px){
+    footer{
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        font-weight: bold;
+        background: rgb(255,49,49);
+        background: linear-gradient(0deg, rgba(255,49,49,0.5646551724137931) 0%, rgba(131,10,147,0) 100%);
+        #footer_principal{
+            text-align: center;
+            #footer_displayFlex{
+                display: flex;
+                #div_img_footer{
+                    width: 30%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                #div_redes_sociais{
+                    margin-top: 70px;
+                    text-align: justify;
+                    width: 40%;
+                    h2{
+                        font-size: 2rem;
+                        color: var(--redColor);
+                        text-align: center;
+                    }
+                    p{  
+                        text-align: center;
+                        Link{
+                            text-decoration: none;
+                        }
+                        margin-top: 8px;
+                        font-size: 1.3rem;
+                        .link_footer{
+                            text-decoration: none;
+                            color: black;
+                        }
+                        .icons{
+                            font-size: 1.5rem;
+                            margin-right: 8px;
+                            color: var(--redColor);
+                        }
+                    }
+                }
+                #div_informacoes_footer{
+                    margin-top: 80px;
+                    p{
+                        margin-top: 8px;
+                        font-size: 1.3rem;
+                        .link_informacoes{
+                            text-decoration: none;
+                            color: var(--redColor);
+                        }
+                        .link_informacoes:hover{
+                            color: rgba(255, 0, 0, 0.519);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

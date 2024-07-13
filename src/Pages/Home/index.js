@@ -9,6 +9,7 @@ import apiLocal from "../../Services/api"
 import BodyCorpo from "../../Components/Body"
 import Header from "../../Components/Header"
 import { ContadorProvider } from "../../ContContext/ContContext"
+import FooterRodape from "../../Components/Footer"
 
 
 
@@ -62,6 +63,10 @@ function Home(){
         <div>
 
             <BodyCorpo/>
+        </div>
+        
+        <div>
+            <FooterRodape/>
         </div>
         
         </ContadorProvider>

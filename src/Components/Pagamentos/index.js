@@ -9,6 +9,7 @@ import apiLocal from '../../Services/api';
 import apiImg from '../../Services/apiImg';
 import imgLogo from '../../Multimidia/LogoMarca.png'
 import './pagamentos.scss'
+import FooterRodape from '../Footer';
 
 function GerarLinkPagamento() {
 
@@ -104,6 +105,12 @@ function GerarLinkPagamento() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if( valorTotal === 0){
+      toast.warn('Ops seu carrinho esta vazio')
+      navigate('/')
+    }
+
     setModalAberto(!modalAberto)
     try {
       const response = await apiLocal.post('/Pagamentos', {
@@ -291,6 +298,10 @@ function GerarLinkPagamento() {
             </div>
             </Modal>
           )}
+
+          <div>
+            <FooterRodape/>
+          </div>
     </div>
   );
 }

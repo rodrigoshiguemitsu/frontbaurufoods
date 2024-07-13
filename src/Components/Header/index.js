@@ -90,7 +90,14 @@ function Header() {
 
     function FinalizarCompra(e) {
         e.preventDefault()
-        navigate('/Pagamento')
+        if(valorTotal === 0){
+            navigate('/')
+            toast.warn('Ops seu carrinho está vazio')
+            window.location.reload()
+            return
+        }else{
+            navigate('/Pagamento')
+        }
     }
     
     const deletarItem = (id) =>{
