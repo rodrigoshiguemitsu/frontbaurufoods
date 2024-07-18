@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 2000px){
+@media screen and (max-width: 3000px){
     #div_corpo_pricipal{
         max-width: 1000px;
         width: 100%;
         margin: auto;
-
+        background-color: #F5F5F5;
     #div_body_principal{
         max-width: 1000px;
         margin: auto;
@@ -28,33 +28,64 @@
             width: 98%;
             margin: auto;
             display: flex;
-            border: 2px solid var(--redColor);
-            border-radius: 6px;
-            margin: 10px 5px 5px 10px;
+            border: 4px solid var(--redColor);
+            border-radius: 3px;
+            margin: 20px 5px 5px 10px;
             height: 300px;
+            
             #div1_produtos_conteudo{
                 text-align: center;
                 width: 30%;
-                height: 300px;
-                background-color: rgba(255, 0, 0, 0.172);
+                height: 291.5px;
+                background-color:var(--redColor) ;
+                .descontoProduto{
+                    float: right;
+                    font-style: italic;
+                    background-color: #F5F5F5;
+                    color: var(--redColor);
+                    padding: 8px;
+                    border-radius: 0px 0px 0px 16px;
+                    border: 2px solid #8B0000 ;
+                }
+                p{
+                    font-weight: bold;
+                    font-size: 2rem;
+                    font-style: italic;
+                    color:#F5F5F5;
+                }
                 img{
-                    width: 100px;
+                    width: 150px;
+                    border-radius: 100px;
+                    box-shadow: 0.1px 0.1px 10px 0.1px black;
                 }
             }
         #div2_produtos_conteudo{
             width: 300px;
             height: 300px;
+            background-color: #F5F5F5;
             img{
                 width: 100%;
-                height: 295px;
+                height: 291.5px;
+                box-shadow: 0.1px 0.1px 10px 0.1px rgba(0, 0, 0, 0.411);
             }
         }
         #div3_produtos_conteudo{
             width: 40%;
             text-align: center;
-            h1{
-                margin: 20px;
+            background-color: #F5F5F5;
+            color: var(--redColor);
+            #Hora_endTime{
+                font-weight: bold;
+                font-size: 2rem;
+                background-color: var(--redColor);
+                padding: 15px;
+                color: #F5F5F5;
+                margin-top: 14px;
             }
+            img{
+                width: 80px;
+            }
+            
             p{
                 margin: 10px;
             }
@@ -77,6 +108,13 @@
             }
             #button_add_carrinho{
                 margin-top: 15px;
+                #addCarrinho_button:disabled {
+                    opacity: 0.5; /* Deixe o botão mais opaco */
+                }
+                #addCarrinho_button:disabled:hover {
+                    opacity: 0.5; /* Deixe o botão mais opaco */
+                    cursor: not-allowed; /* Muda o cursor para indicar que o botão está desabilitado */
+                }
                 button{
                     background-color: var(--redColor);
                     color: white;
@@ -96,75 +134,101 @@
                     font-size: 1.1rem;
                 }
                 
+                
             }
+            
             
         
         }
         
-    }
-}
-#div_modal_principal{
-    text-align: center;
-    max-width: 700px;
-    margin: auto;
-   
-    img{
-        width: 100%;
-    }
-    #div_detalhes{
-        display: flex;
-        width: 100%;
+    }}}
+    #div_modal_principal{
+        text-align: center;
+        max-width: 700px;
         margin: auto;
-        justify-content: center;
-        
-        #div1_detalhes{
-            max-width: 100%;
-            width: 100%;
-            h2{
-                font-size: 1.5rem;
-            }
-            p{
-                font-size: 1.3rem;
-                margin-top: 8px;
-            }
+        background-color: #F5F5F5;
+        border: 2px solid var(--redColor);
+        border-radius: 6px;
+        #img_logoEmpresa_modal_body{
+            width: 40%;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 150px;
+            box-shadow: 1px 1px 10px 1px;
         }
-        #div2_detalhes{
-            max-width: 100%;
+        
+        #div_detalhes{
+            display: flex;
             width: 100%;
-            p{
+            margin: auto;
+            margin-top: 30px;
+            #img_modal_body{
+                border-radius: 6px;
+                border: 1px solid black;
+                box-shadow: 1px 1px 10px 1px ;
+                width: 40%;
+                margin: auto;
+            }
+            #div2_detalhes{
                 font-size: 1.3rem;
-                margin-top: 8px;
-            }
-            #preco_concorrencia{
-                color: var(--redColor);
-                font-size: 1.1rem;
-                margin-top: 8px;
-            }
-            #preco_bauru_foods{
-                border: 2px solid var(--redColor);
-                border-radius: 10px 0px;
-                padding: 8px;
-                font-size: 1.5rem;
                 font-weight: bold;
                 color: var(--redColor);
             }
         }
+
+        #info_loja{
+            margin-top: 30px;
+            #div_flex_modal_loja{
+                display: flex;
+                
+            }
+            .div_informacoes_Loja{
+                width: 100%;
+                margin-top: 40px;
+                margin-bottom: 30px;
+                p{
+                   font-size: 1.3rem;
+                   font-weight: bold;
+                   margin-top: 8px;
+                }
+                .link_info{
+                   font-size: 1.3rem;
+                   text-decoration: none;
+                   color:var(--redColor);
+                   font-weight: bold;
+                   
+               }
+            }
+            #div1_detalhes{
+                max-width: 100%;
+                width: 100%;
+                margin-top: 30px;
+                h2{
+                    font-size: 1.5rem;
+                    color: var(--redColor);
+                }
+                p{
+                    font-size: 1.3rem;
+                    margin-top: 8px;
+                    
+                }
+            }
+        }
     }
-}
-#div_button_modal{
-    
-    color: var(--redColor);
-    font-size: 1.5rem;
-    position: fixed;
-    right: 90px;
-}
-#div_button_modal:hover{
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: black;
-    
-}
+    #div_button_modal{
+        
+        color: var(--redColor);
+        font-size: 1.5rem;
+        position: fixed;
+        right: 90px;
     }
+    #div_button_modal:hover{
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: black;
+        
+    }
+    
 }
 
 

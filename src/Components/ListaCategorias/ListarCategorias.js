@@ -46,10 +46,15 @@ function ListarCategorias(){
     const [listaCategoria, setListaCategoria] = useState([])
 
     useEffect(() => {
-
+        const iToken = localStorage.getItem('@usubaurufoods')
+        const token = JSON.parse(iToken)
         async function VerCategorias() {
 
-            const resposta = await apiLocal.get('/ListarCategoria/files')
+            const resposta = await apiLocal.get('/ListarCategoria/files',{
+                headers:{
+                    Authorization: `Bearer ${token}`
+                }
+            })
             setListaCategoria(resposta.data)
         }
         VerCategorias()
@@ -73,7 +78,8 @@ function ListarCategorias(){
 
             
 
-            <Link to={categoria.nomeCategoria} id="link_categoria">
+            {/* <Link to={categoria.nomeCategoria} id="link_categoria"> */}
+            <Link to='#' id="link_categoria">
                 <img id='img_banner_categoria' src={`${apiImg}${categoria.banner}`} alt='banner' />
 
                 <p>{categoria.nomeCategoria}</p>

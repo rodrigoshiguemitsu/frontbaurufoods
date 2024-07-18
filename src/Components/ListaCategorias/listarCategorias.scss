@@ -18,18 +18,19 @@
 }
 
 
-
 @media screen and (max-width: 2000px){
    
     #div_categorias1_corpo{
-        background: rgb(255,49,49);
-        background: linear-gradient(180deg, rgba(255,49,49,0.5646551724137931) 0%, rgba(131,10,147,0) 100%);
+        // background: rgb(255,49,49);
+        // background: linear-gradient(180deg, rgba(255,49,49,0.5646551724137931) 0%, rgba(131,10,147,0) 100%);
         max-width: 1000px;
         width: 100%;
         margin: auto;
         display: flex;
+        padding-top: 60px;
         overflow-y: auto;
         border-radius: 10px 10px 0px 0px;
+        border: 1px solid rgba(0, 0, 0, 0.045);
         #div_categoria_filha1{
             width: 150px;
             height: 150px;

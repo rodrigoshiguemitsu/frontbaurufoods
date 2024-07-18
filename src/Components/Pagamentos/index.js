@@ -17,6 +17,7 @@ function GerarLinkPagamento() {
   const [valor, setValor] = useState('');
   const [descricao] = useState('ItensDeCompra');
   const [nome, setNome] = useState('');
+  const [codUsuario,setCodUsuario] = useState('')
   const [email, setEmail] = useState('');
   const [tipoDocumento, setTipoDocumento] = useState('CPF');
   const [documento, setDocumento] = useState('');
@@ -35,6 +36,7 @@ function GerarLinkPagamento() {
 
 
   const [modalAberto,setModalAberto] = useState (false)
+
   
 
   useEffect(()=>{
@@ -71,7 +73,7 @@ function GerarLinkPagamento() {
         } else if (resposta.data.id) {
           navigate('/Pagamento')
           return
-        }
+        }  
       }
       VerToken()
     }
@@ -92,6 +94,7 @@ function GerarLinkPagamento() {
       })
       
       setNome(resClientePag.data.nome)
+      setCodUsuario(resClientePag.data.codigoIdCliente)
       setEmail(resClientePag.data.email)
       setTipoDocumento(resClientePag.data.tipoDocumento)
       setDocumento(resClientePag.data.cpf)
@@ -102,6 +105,8 @@ function GerarLinkPagamento() {
     handleClientePag()
   }, [token])
 
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -170,7 +175,7 @@ function GerarLinkPagamento() {
 
         
         
-        const message = encodeURIComponent(`Olá meu nome é ${nome} !\nfiz uma compra no Bauru foods\n${produtosMapeados}\nValor Total: RS${valorTotal.toFixed(2)}
+        const message = encodeURIComponent(`Olá meu nome é ${nome} !\nfiz uma compra no Bauru foods e gostaria de liberar meu pedido, cód.usuário:${codUsuario}\n${produtosMapeados}\nValor Total: RS${valorTotal.toFixed(2)}
           `)
 
         
@@ -212,6 +217,8 @@ function GerarLinkPagamento() {
         <div id='div_produtos_form_pagamento'>
           {produtos.map((produto)=>{
             const quantidade = contadorItem[produto.id] || 1;
+            const banner1 = produto.banners[0]
+            const banner2 = produto.banners[1]
             return(
               <div
               key={produto.id}
@@ -220,12 +227,12 @@ function GerarLinkPagamento() {
                 <div id='nome_preco_pagamento'>
                 <h2>{produto.nome}</h2><br/>
                 <p>Quantidade:{quantidade}</p>
-                <p>Preço concorrente:{produto.concorrentePreco}</p>
-                <p>Preço bauru-foods:{produto.preco}</p>
+                <p>{produto.concorrentePreco}% OFF</p>
+                <p>{produto.preco}R$</p>
                 </div>
                 
                 <div id='div_img_pagamento'>
-                <img src={`${apiImg}${produto.banner}`} alt='banner'/>
+                <img src={`${apiImg}${banner1.url}`} alt='banner'/>
                 </div>
 
                 <div>

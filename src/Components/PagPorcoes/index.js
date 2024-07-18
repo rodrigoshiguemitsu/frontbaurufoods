@@ -17,11 +17,16 @@ function PagPorcoes(){
 
     return(
         <div>
+            <p>
+                Olé
+            </p>
+
             {listaPorcoes.map((porcao)=>{
                 return(
                     <div>
                         <p>
                             {porcao.nome}
+                            Olá
                         </p>
                         </div>
                 )
